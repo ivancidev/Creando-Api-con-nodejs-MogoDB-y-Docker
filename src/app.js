@@ -6,7 +6,7 @@ config()
 
 dbConnect()
 
-const userRoutes = require('./routes/user.routes')
+const userRoutes = require('../routes/user.routes')
 const bodyParser = require('body-parser')
 
 //se usa express para la middleware
@@ -19,7 +19,7 @@ app.use('/users', userRoutes)
 
 
 app.listen(port, ()=>{
-    console.log(`Servidor iniciado... en el puerto ${port}`)
+    console.log(`Servidor iniciado con exito en el puerto ${port}`)
 } )
 
 

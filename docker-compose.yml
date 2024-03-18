@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  mongo_db: 
+  mongoDB: 
     image: mongo:5.0.25
     restart: always
     environment:
