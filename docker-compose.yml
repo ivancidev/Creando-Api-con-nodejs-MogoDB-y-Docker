@@ -11,4 +11,12 @@ services:
       - ./mongo:/data/db
     ports:
       - 27017:27017
-    
+  nodejs_app:
+    build: .
+    restart: always
+    ports:
+      - "3000:${PORT}"
+    depends_on:
+      - mongoDB
+    volumes:
+      - ./:/data/db
